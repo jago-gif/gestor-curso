@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link data-th-href="@{/css/bootstrap.min.css}" rel="stylesheet">
+    <link data-th-href="@{/css/main.css}" rel="stylesheet">
+</head>
+<body>
+<style>
+.flex-container {
+    display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
+    }
+    .card-img-top{
+    width: 280px;	
+}
+	
+</style>
+<div class="container">
+<img
+
+<h2>Nuestros Cursos</h2>
+    <div class="flex-container">
+	  <div class="card-box">
+	  		<div class="row">
+			    <div class="asd" th:each="cur : ${cursos}">
+			      <img class="card-img-top"  th:src="${cur.imagen}"  alt="...">
+			      <div>
+			        <h5 class="card-title">[[${cur.nombre}]]</h5>
+			        <span>Desde [[${cur.fecinicio}]]</span>  <span>hasta [[${cur.fectermino}]]</span>
+			        <p class="card-text">[[${cur.descripcion}]]</p>
+			      </div>
+			    </div>
+	  		</div>
+	  </div>
+    </div> 
+
+</div>
+</body></html>
